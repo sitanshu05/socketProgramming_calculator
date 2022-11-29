@@ -33,15 +33,7 @@ def calc(cmd):
         if '-n' not in args:
             return 'INV_ARGS'
         n = args.index('-n')
-        print(n)
         args_num = int(args[n+1])
-        print(args_num)
-
-        print(args.pop(0))
-        print(args.pop(n-1))
-        print(args.pop(n-1))
-
-        print(args)
         nums = list(map(float, args))
 
         if len(args) <= 1 or args_num == 1:
