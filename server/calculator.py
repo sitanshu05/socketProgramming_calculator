@@ -2,7 +2,6 @@ ans = 0
 def calc(cmd):
     global ans
     args = cmd.split(' ')
-    
     valid_commands = ['ADD','SUB','MULT', 'DIV','POW']
 
     if args[0] not in valid_commands:
@@ -34,6 +33,11 @@ def calc(cmd):
             return 'INV_ARGS'
         n = args.index('-n')
         args_num = int(args[n+1])
+
+        args.pop(0)
+        args.pop(n-1)
+        args.pop(n-1)
+
         nums = list(map(float, args))
 
         if len(args) <= 1 or args_num == 1:

@@ -22,5 +22,4 @@ while True:
     cmd = c.recv(1024).decode()
     
     ret = calculator.calc(cmd)
-    if(type(ret) == str):
-        c.send(ret.encode())
+    c.send(ret.encode())
